@@ -53,3 +53,12 @@ losers_urls = ['https://finance.yahoo.com/losers?offset=0&count=100',
                'https://finance.yahoo.com/losers?offset=100&count=100',
                'https://finance.yahoo.com/losers?offset=200&count=100']
 
+# Now let's test the function
+most_active = get_data(most_active_urls)
+print(most_active.head())
+
+gainers = get_data(gainers_urls)
+print(gainers.head())
+
+losers = get_data(losers_urls)
+print(losers.head())
