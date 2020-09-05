@@ -8,6 +8,7 @@ This file contains the functions to be used in the Stock Market Analysis project
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
+from datetime import datetime as dt
 
 
 # This function scrapes the stock data from the list of urls and combines them into a single data frame.
@@ -35,5 +36,7 @@ def get_data(url_list=[],Cols=['symbol', 'name', 'price_(intraday)', 'change', '
 
     # This is where the different DataFrames are merged together into a single DataFrame.
     final_data = pd.concat(dataframes)
+    # Adding a time stamp to the data pull
+    final_data['datetime'] = pd.to_datetime(dt.now())
     # This returns the final DataFrame with all data in a single DataFrame
     return final_data
