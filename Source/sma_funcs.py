@@ -40,3 +40,5 @@ def get_data(url_list=[],Cols=['symbol', 'name', 'price_(intraday)', 'change', '
     final_data['datetime'] = pd.to_datetime(dt.now())
     # This returns the final DataFrame with all data in a single DataFrame
     return final_data
+
+

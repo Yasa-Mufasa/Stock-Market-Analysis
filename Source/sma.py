@@ -40,8 +40,8 @@ from sma_funcs import *
 
 # These are the three pages of the most active stocks. This will grab up to 300 stocks.
 most_active_urls = ['https://finance.yahoo.com/most-active?count=100&offset=0',
-       'https://finance.yahoo.com/most-active?count=100&offset=100',
-       'https://finance.yahoo.com/most-active?count=100&offset=200']
+                    'https://finance.yahoo.com/most-active?count=100&offset=100',
+                    'https://finance.yahoo.com/most-active?count=100&offset=200']
 
 # These are the three pages of the gainers.
 gainers_urls = ['https://finance.yahoo.com/gainers?offset=0&count=100',
@@ -53,7 +53,7 @@ losers_urls = ['https://finance.yahoo.com/losers?offset=0&count=100',
                'https://finance.yahoo.com/losers?offset=100&count=100',
                'https://finance.yahoo.com/losers?offset=200&count=100']
 
-# Now let's test the function
+# Now let's scrape the data and save the files. These files will be used after the data is pulled over several days.
 most_active = get_data(most_active_urls)
 print(most_active.head())
 
